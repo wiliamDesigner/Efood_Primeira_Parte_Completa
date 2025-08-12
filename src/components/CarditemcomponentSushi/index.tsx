@@ -15,6 +15,8 @@ import {
 } from "./styles";
 import { CardItem } from "../Cardlista/styles";
 import Estrela from "../../assets/estrela.png"
+import { Link } from "react-router-dom";
+
 
 interface CardItemProps {
   imagem1: string;
@@ -36,7 +38,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
         </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!</DescricaodoPrato>
+       <Link to="/perfil">
         <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
@@ -52,7 +56,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
            </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!</DescricaodoPrato>
-         <SaibaMais>Saiba mais</SaibaMais>
+        <Link to="/perfil">
+        <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
@@ -68,7 +74,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
          </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!</DescricaodoPrato>
-         <SaibaMais>Saiba mais</SaibaMais>
+         <Link to="/perfil">
+        <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
@@ -84,7 +92,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
          </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!</DescricaodoPrato>
-         <SaibaMais>Saiba mais</SaibaMais>
+        <Link to="/perfil">
+        <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
@@ -100,7 +110,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
           </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!</DescricaodoPrato>
-         <SaibaMais>Saiba mais</SaibaMais>
+         <Link to="/perfil">
+        <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
@@ -116,7 +128,9 @@ const CarditemcomponentSushi: React.FC<CardItemProps> = ({ imagem1, imagem2 }) =
         </NotaComEstrela>
          </LinhaDoTitulo>
         <DescricaodoPrato>A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!</DescricaodoPrato>
-         <SaibaMais>Saiba mais</SaibaMais>
+        <Link to="/perfil">
+        <SaibaMais>Saiba mais</SaibaMais>
+        </Link>
       </CardItem>
     </CardSushiWrapper>
 
