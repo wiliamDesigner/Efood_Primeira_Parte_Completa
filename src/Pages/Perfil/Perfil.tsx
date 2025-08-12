@@ -3,6 +3,7 @@ import logoimg2 from "../../assets/logo.png"
 import apressentacao from "../../assets/apressentacao.png"
 import Pizzas from "./Pizzas/Pizzas";
 import Footer from "./Foot/Footer";
+import { Link } from "react-router-dom";
 function Perfil(){
 
     return(
@@ -10,7 +11,9 @@ function Perfil(){
         <Headerbar>
             <Menu>
             <Paragrafo>Restaurante</Paragrafo>
+            <Link to="/">
              <img src={logoimg2} alt="Logo" />
+             </Link>
             <Paragrafo>0 Produto(s) no carinho</Paragrafo>
             </Menu>
         </Headerbar>
