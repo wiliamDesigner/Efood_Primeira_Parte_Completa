@@ -60,12 +60,13 @@ export const Containerimgep = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: ${cores.branco_mais_claro};
 `
 
 export const TextoSobreImagem = styled.p`
   position: absolute;
   top: 2%;
-  left: 10%;
+  left: 30%;
   color: ${cores.branca};
   font-size: 32px;
   z-index: 2;
@@ -78,7 +79,7 @@ export const TextoSobreImagem = styled.p`
 export const TextoLadoce=styled.p`
  position: absolute;
   top: 60%;
-  left: 10%;
+  left: 30%;
   color: ${cores.branca};
   font-size: 32px;
   font-weight: bold;
