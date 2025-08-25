@@ -1,4 +1,4 @@
-import { Containerimg, Containerimgep, Headerbar, Imgapressentacao, Menu, Paragrafo, TextoLadoce, TextoSobreImagem } from "./styles";
+import { Containerimg, Containerimgep, Headerbar, Imgapressentacao, Menu, Paragrafo, TextoLadoce, TextoSobreImagem, Tudo } from "./styles";
 import logoimg2 from "../../assets/logo.png"
 import apressentacao from "../../assets/apressentacao.png"
 import Pizzas from "./Pizzas/Pizzas";
@@ -8,6 +8,7 @@ function Perfil(){
 
     return(
         <>
+        <Tudo>
         <Headerbar>
             <Menu>
             <Paragrafo>Restaurante</Paragrafo>
@@ -26,6 +27,7 @@ function Perfil(){
         </Containerimg>
         <Pizzas/>
         <Footer/>
+        </Tudo>
         </>
     );
 }

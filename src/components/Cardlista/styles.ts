@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { cores } from "../../Styles";
 
-export const Cardes = styled.div` //quadrado branco
+export const Cardes = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   align-items: start;
-  background-color: ${cores.branco_mais_claro};
+  background-color: #FFF8F2;
   width: 980px;
   height: 708px;
 `;
 
-export const CardItem = styled.div` //retangulo vermelho
+export const CardItem = styled.div` 
   width: 472px;
   height: 181px;
   display: flex;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { cores } from "../../Styles";
 export const CardContainer = styled.div`
   width: 472px;
   display: flex;
@@ -12,9 +11,7 @@ export const CardImage = styled.img`
   object-fit: cover;
 `;
 
-export const CardText = styled.div`
-  color: ${cores.vermelha};
-`;
+
 
 export const CardImageGroup = styled.div`
    display: grid;

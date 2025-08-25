@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { cores } from "../../Styles";
 
 export const CardContainerMacarao = styled.div`
   display: grid;
@@ -7,7 +6,7 @@ export const CardContainerMacarao = styled.div`
   grid-template-rows: auto;
   gap: 40px;
   align-items: start;
-  background-color: ${cores.branco_mais_claro};
+  background-color: #fff8f2;
   width: 980px;
   height: 708px;
 `;
@@ -20,8 +19,6 @@ export const CardImageGroupMacarao = styled.div`
   row-gap: 0px;
 `;
 
-
-
 export const CardImageMacarao = styled.img`
   width: 472px;
   height: 217px;
@@ -31,6 +28,4 @@ export const CardImageMacarao = styled.img`
 export const CardTextMacarao = styled.div`
   font-size: 20px;
   font-family: "Roboto";
-  color: ${cores.vermelha};
 `;
-

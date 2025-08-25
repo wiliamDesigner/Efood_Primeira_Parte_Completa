@@ -35,7 +35,7 @@ export const TipodeComida=styled.h2`
   width: 70px;
   height: 30px;
   background-color: ${cores.vermelha};
-  color: white;
+  color: #FFF8F2;
   display: flex;
   align-items: center;    
   justify-content: center; 
@@ -66,7 +66,7 @@ margin-left: 12px;
 export const SaibaMais=styled.button`
 margin-left: 12px;
 margin-top: 12px;
-color: ${cores.branca};
+color: #FFF8F2;
 background-color: ${cores.vermelha};
 border: none;
 width: 82px;

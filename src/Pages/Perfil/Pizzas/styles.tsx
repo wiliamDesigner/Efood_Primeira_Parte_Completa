@@ -20,7 +20,7 @@ export const Criandoagrid = styled.div`
 
 export const Quadradosdapizza = styled.div`
   background-color: ${cores.vermelha};
-  color: ${cores.branca};
+  color: #FFF8F2;
   border: 3px solid ${cores.vermelha};
   width: 100%;
   height: auto;
@@ -54,7 +54,7 @@ export const Botao = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#FFEBD9;
+  background-color:#FFF8F2;
 ;
   width: 304px;
   height: 24px;
@@ -67,6 +67,6 @@ export const Botao = styled.button`
   align-self: center;
 
   &:hover {
-    background-color:${cores.branca};
+    background-color:#FFF8F2;
   }
 `;

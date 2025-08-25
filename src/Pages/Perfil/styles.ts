@@ -3,6 +3,10 @@ import backgroundimg from "../../assets/fundo.png";
 import { cores } from "../../Styles";
 
 
+export const  Tudo=styled.div`
+background-color: ${cores.branco_mais_claro};
+
+`
 
 export const Headerbar = styled.header`
   background-image: url(${backgroundimg});
