@@ -42,7 +42,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-gap: 218px;
+gap: 341px;
 
 `
 export const Containerimg=styled.div`
@@ -52,10 +52,11 @@ justify-content: center;
 `
 
 export const Imgapressentacao=styled.img`
- max-width: 1366px;
+ max-width: 1381px;
  margin: 0 auto;
   width: 100%;
   filter: brightness(0.5);
+  display: block;
 `
 
 export const Containerimgep = styled.div`
@@ -70,7 +71,7 @@ export const Containerimgep = styled.div`
 export const TextoSobreImagem = styled.p`
   position: absolute;
   top: 2%;
-  left: 30%;
+  left: 28%;
   color: ${cores.branca};
   font-size: 32px;
   z-index: 2;
@@ -83,7 +84,7 @@ export const TextoSobreImagem = styled.p`
 export const TextoLadoce=styled.p`
  position: absolute;
   top: 60%;
-  left: 30%;
+  left: 28%;
   color: ${cores.branca};
   font-size: 32px;
   font-weight: bold;

@@ -16,6 +16,8 @@ function Pizzas() {
   const[open,setOpen]=useState(false);
 
   return (
+    <>
+    <Modal isOpen={open} onClose={()=>setOpen(false)}/>
     <Centralizandotudo>
       <Criandoagrid>
         <Quadradosdapizza>
@@ -26,7 +28,7 @@ function Pizzas() {
           </DescricaoPizza>
           <Botao onClick={()=>setOpen(true)}>Adicionar ao Carrinho</Botao>
           
-          <Modal isOpen={open} onClose={()=>setOpen(false)}/>
+          
 
         </Quadradosdapizza>
 
@@ -75,6 +77,7 @@ function Pizzas() {
         </Quadradosdapizza>
       </Criandoagrid>
     </Centralizandotudo>
+    </>
   );
 }
 
