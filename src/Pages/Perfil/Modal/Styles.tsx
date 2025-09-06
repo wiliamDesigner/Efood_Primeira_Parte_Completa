@@ -24,20 +24,33 @@ flex-direction: row;
 margin-left: 32px;
 `
 
+export const ImagemProduto=styled.img`
+width: 300px;
+  height: 300px;
+
+`
+
 export const TextoeBotoes=styled.div`
 display: flex;
 flex-direction: column;
 margin-left: 24px;
+align-items: flex-start;
+text-align: left;
 
 `
 
 export const TextoTitulo=styled.h1`
 color: #FFFFFF;
+font-size: 18px;
 `
 
 export const Textodescricao=styled.p`
-
 color:#FFFFFF ;
+font-family: 'Roboto', sans-serif; 
+font-size: 14px;
+
+
+
 `
 
 
@@ -61,3 +74,17 @@ export const Content = styled.div`
 export const Texto = styled.h2`
   color: ${cores.branco_mais_claro};
 `;
+
+
+export const BotaoComprar=styled.button`
+width: 218px;
+height: 24px;
+color:${cores.vermelha};
+background-color: #FFEBD9;
+outline: none;
+border: none;
+font-size: 14px;
+font-family: 'Roboto', sans-serif; 
+font-weight: bold;
+
+`

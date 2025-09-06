@@ -1,14 +1,41 @@
-import { Overlay, Content, Texto, Btnfechar, Header, Organizacao, TextoeBotoes, TextoTitulo, Textodescricao } from "../Modal/Styles";
+import { Overlay, Content,  Btnfechar, Header, Organizacao, TextoeBotoes, TextoTitulo, Textodescricao, BotaoComprar,  ImagemProduto} from "../Modal/Styles";
 import pizzaImg from "../../../assets/imagem-da-pizza.png"
+import { useEffect, useState } from "react";
 
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
-const Modal = ({ isOpen, onClose }: ModalProps) => {
+type Produto={
+  id:number;
+  nome:string;
+  descricao:string;
+  capa:string;
+  preco:number;
+  porcao:number;
+};
+
+const Modal = ({ isOpen, onClose}: ModalProps) => {
+  const[produto,setproduto]=useState<Produto | null>(null);
+
+  useEffect(()=>{
+    if(isOpen){
+      fetch("https://ebac-fake-api.vercel.app/api/efood/restaurantes")
+      .then((res)=>res.json())
+      .then((data)=>{
+        const restaurante=data[0];
+        const item=restaurante.cardapio[0];
+         console.log("Produto carregado:", item);
+        setproduto(item);
+      })
+      .catch((err)=>console.error("Erro ao carregar o produto",err));
+    }
+  },[isOpen]);
+
   if (!isOpen) return null;
 
+  
   return (
     <Overlay>
       <Content>
@@ -16,14 +43,21 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
         <Btnfechar onClick={onClose}>X</Btnfechar>
         </Header>
         <Organizacao>
-        <img src={pizzaImg} alt="" />
-        <TextoeBotoes>
-        <TextoTitulo>Texto de titulo</TextoTitulo>
-        <Textodescricao>descrição</Textodescricao>
-        <button>Adicionar ao carrinho</button>
-        </TextoeBotoes>
+          {produto ? (
+            <>
+              
+              <ImagemProduto src={`https://ebac-fake-api.vercel.app${produto.capa}`} alt={produto.nome} />
+              <TextoeBotoes>
+                <TextoTitulo>{produto.nome}</TextoTitulo>
+                <Textodescricao>{produto.descricao}</Textodescricao>
+                <Textodescricao>Serve:de {produto.porcao} </Textodescricao>
+                <BotaoComprar>Adicionar ao carrinho-R${produto.preco}</BotaoComprar>
+              </TextoeBotoes>
+            </>
+          ) : (
+            <p>Carregando...</p>
+          )}
         </Organizacao>
-      <Texto>Olá mundo</Texto>
       </Content>
     </Overlay>
   );
