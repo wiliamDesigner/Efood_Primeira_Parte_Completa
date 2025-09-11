@@ -63,7 +63,7 @@ border: none;
 
 export const Content = styled.div`
   width: 1024px;
-  height: 344px;
+  min-height: 344px;
   padding: 20px;
   min-width: 300px;
   text-align: center;

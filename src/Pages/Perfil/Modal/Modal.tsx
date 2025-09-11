@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  produtoId: number | null;
 };
 
 type Produto = {
@@ -23,25 +24,27 @@ type Produto = {
   descricao: string;
   foto: string;
   preco: number;
-  porcao: number;
+  porcao: string;
 };
 
-const Modal = ({ isOpen, onClose }: ModalProps) => {
+const Modal = ({ isOpen, onClose, produtoId }: ModalProps) => {
   const [produto, setproduto] = useState<Produto | null>(null);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && produtoId !== null) {
       fetch("https://ebac-fake-api.vercel.app/api/efood/restaurantes")
         .then((res) => res.json())
         .then((data) => {
           const restaurante = data[0];
-          const item = restaurante.cardapio[0];
+          const item = restaurante.cardapio.find(
+            (p: Produto) => p.id === produtoId
+          );
           console.log("Produto carregado:", item);
           setproduto(item);
         })
         .catch((err) => console.error("Erro ao carregar o produto", err));
     }
-  }, [isOpen]);
+  }, [isOpen,produtoId]);
 
   if (!isOpen) return null;
 
@@ -54,9 +57,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
         <Organizacao>
           {produto ? (
             <>
-              <ImagemProduto
-                src={`https://ebac-fake-api.vercel.app${produto.foto}`}alt={produto.nome}
-              />
+              <ImagemProduto src={produto.foto} alt={produto.nome} />
               <TextoeBotoes>
                 <TextoTitulo>{produto.nome}</TextoTitulo>
                 <Textodescricao>{produto.descricao}</Textodescricao>
