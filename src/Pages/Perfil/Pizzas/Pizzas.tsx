@@ -42,7 +42,6 @@ function Pizzas() {
     <Modal isOpen={open} onClose={()=>setOpen(false)}produtoId={produtoId}/>
     <Centralizandotudo>
       <Criandoagrid>
-        {/* 🔹 Aqui está a mágica: o .map() cria os cards */}
           {produtos.map((pizza) => (
             <Quadradosdapizza key={pizza.id}>
               <EditandoFotosdaPizza src={pizza.foto} alt={pizza.nome} />
@@ -50,8 +49,8 @@ function Pizzas() {
               <DescricaoPizza>{pizza.descricao}</DescricaoPizza>
               <Botao
                 onClick={() => {
-                  setProdutoId(pizza.id); // passa o id real
-                  setOpen(true); // abre o modal
+                  setProdutoId(pizza.id); 
+                  setOpen(true);
                 }}
               >
                 Adicionar ao Carrinho
